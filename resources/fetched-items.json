@@ -1,0 +1,640 @@
+[
+  {
+    "id": 297249,
+    "availableFrom": "2020-02-19 01:23:44",
+    "variationId": 985947,
+    "pbbCode": "SS20-SJM05B",
+    "colorName": "стоманено-син",
+    "frontColorName": "син",
+    "price": 129.9,
+    "name": "Levi's - Дънки 501",
+    "description": "Дънки от колекция Levi's. Модел с нормална талия, тип прави. Моделът е направен от \"измит\" дънков плат.",
+    "fullDescription": "Моля, имайте предвид, че поради политиката за защита на търговските марки на Levi's, приблизително 10% от диапазона има \"празна вложка\" (в червено, без логото на марката, само със символ на международна регистрирана търговска марка). Така наречената \"празна вложка\" е регистрирана търговска марка на марката Levi's, а моделите, които я носят, са оригинални продукти с пълна стойност. Ако имате съмнения, моля, свържете се с отдела за обслужване на клиенти.<br /><br />- Кройка straight.<br />- Джобове без закопчаване.<br />- Обикновена талия.<br />- Закопчаване с копчета.<br />- Декоративно избелен деним.<br />- Ширина в талията: 41 cm.<br />- Ширина в бедрата: 51 cm.<br />- Височина на талията: 28 cm.<br />- Ширина на крачолите в долната част: 19 cm.<br />- Ширина на крачолите: 29 cm.<br />- Дължина на крачолите: 102 cm.<br />- Мерките се отнасят за размер: 31/32.",
+    "colorversionCode": "SS20-SJM05B_95X",
+    "frontendUuid": "PPYK-SJM05B_95X",
+    "producerCode": "00501.3001",
+    "sex": "M",
+    "season": "SS20",
+    "material": "<br />96% Памук, 2% Еластан, 2% Полиестер",
+    "brand": "Levi's",
+    "productBrand": {
+      "id": 337,
+      "name": "Levi's",
+      "slug": "levis",
+      "logo": "cp/cms/product-brand/165-5ce527d612bd26.85169173"
+    },
+    "color": {
+      "id": 35,
+      "name": "стоманено-син",
+      "colorPbbCode": "95X"
+    },
+    "frontColor": {
+      "id": 25,
+      "name": "син",
+      "productsCount": null,
+      "background": "#17458b",
+      "isSelected": false
+    },
+    "sizes": [
+      {
+        "id": 207,
+        "name": "30/30",
+        "variation": {
+          "id": 985957,
+          "quantity": 1,
+          "ean": "5400816964964"
+        },
+        "productsCount": null,
+        "isSelected": false
+      },
+      {
+        "id": 183,
+        "name": "30/32",
+        "variation": {
+          "id": 985947,
+          "quantity": 1,
+          "ean": "5400816964971"
+        },
+        "productsCount": null,
+        "isSelected": false
+      },
+      {
+        "id": 203,
+        "name": "31/30",
+        "variation": {
+          "id": 985958,
+          "quantity": 1,
+          "ean": "5400816964995"
+        },
+        "productsCount": null,
+        "isSelected": false
+      },
+      {
+        "id": 182,
+        "name": "31/34",
+        "variation": {
+          "id": 985955,
+          "quantity": 2,
+          "ean": "5400816973515"
+        },
+        "productsCount": null,
+        "isSelected": false
+      },
+      {
+        "id": 206,
+        "name": "32/30",
+        "variation": {
+          "id": 985959,
+          "quantity": 2,
+          "ean": "5400816973522"
+        },
+        "productsCount": null,
+        "isSelected": false
+      },
+      {
+        "id": 204,
+        "name": "33/30",
+        "variation": {
+          "id": 985956,
+          "quantity": 1,
+          "ean": "5400816973553"
+        },
+        "productsCount": null,
+        "isSelected": false
+      },
+      {
+        "id": 178,
+        "name": "33/32",
+        "variation": {
+          "id": 985949,
+          "quantity": 3,
+          "ean": "5400816973560"
+        },
+        "productsCount": null,
+        "isSelected": false
+      },
+      {
+        "id": 180,
+        "name": "33/34",
+        "variation": {
+          "id": 985950,
+          "quantity": 2,
+          "ean": "5400816973577"
+        },
+        "productsCount": null,
+        "isSelected": false
+      },
+      {
+        "id": 179,
+        "name": "34/32",
+        "variation": {
+          "id": 985948,
+          "quantity": 3,
+          "ean": "5400816973607"
+        },
+        "productsCount": null,
+        "isSelected": false
+      },
+      {
+        "id": 181,
+        "name": "34/34",
+        "variation": {
+          "id": 985951,
+          "quantity": 1,
+          "ean": "5400816973614"
+        },
+        "productsCount": null,
+        "isSelected": false
+      },
+      {
+        "id": 221,
+        "name": "34/30",
+        "variation": {
+          "id": 985960,
+          "quantity": 2,
+          "ean": "5400816973591"
+        },
+        "productsCount": null,
+        "isSelected": false
+      },
+      {
+        "id": 186,
+        "name": "36/32",
+        "variation": {
+          "id": 985952,
+          "quantity": 3,
+          "ean": "5400816973645"
+        },
+        "productsCount": null,
+        "isSelected": false
+      },
+      {
+        "id": 187,
+        "name": "36/34",
+        "variation": {
+          "id": 985954,
+          "quantity": 1,
+          "ean": "5400816973652"
+        },
+        "productsCount": null,
+        "isSelected": false
+      }
+    ],
+    "allSizes": [
+      {
+        "id": 207,
+        "name": "30/30",
+        "variation": {
+          "id": 985957,
+          "quantity": 1,
+          "ean": "5400816964964"
+        },
+        "productsCount": null,
+        "isSelected": false
+      },
+      {
+        "id": 183,
+        "name": "30/32",
+        "variation": {
+          "id": 985947,
+          "quantity": 1,
+          "ean": "5400816964971"
+        },
+        "productsCount": null,
+        "isSelected": false
+      },
+      {
+        "id": 203,
+        "name": "31/30",
+        "variation": {
+          "id": 985958,
+          "quantity": 1,
+          "ean": "5400816964995"
+        },
+        "productsCount": null,
+        "isSelected": false
+      },
+      {
+        "id": 175,
+        "name": "31/32",
+        "variation": {
+          "id": 986965,
+          "quantity": 0,
+          "ean": "5400816973508"
+        },
+        "productsCount": null,
+        "isSelected": false
+      },
+      {
+        "id": 182,
+        "name": "31/34",
+        "variation": {
+          "id": 985955,
+          "quantity": 2,
+          "ean": "5400816973515"
+        },
+        "productsCount": null,
+        "isSelected": false
+      },
+      {
+        "id": 206,
+        "name": "32/30",
+        "variation": {
+          "id": 985959,
+          "quantity": 2,
+          "ean": "5400816973522"
+        },
+        "productsCount": null,
+        "isSelected": false
+      },
+      {
+        "id": 188,
+        "name": "32/32",
+        "variation": {
+          "id": 986963,
+          "quantity": 0,
+          "ean": "5400816844136"
+        },
+        "productsCount": null,
+        "isSelected": false
+      },
+      {
+        "id": 185,
+        "name": "32/34",
+        "variation": {
+          "id": 986964,
+          "quantity": 0,
+          "ean": "5400816973539"
+        },
+        "productsCount": null,
+        "isSelected": false
+      },
+      {
+        "id": 204,
+        "name": "33/30",
+        "variation": {
+          "id": 985956,
+          "quantity": 1,
+          "ean": "5400816973553"
+        },
+        "productsCount": null,
+        "isSelected": false
+      },
+      {
+        "id": 178,
+        "name": "33/32",
+        "variation": {
+          "id": 985949,
+          "quantity": 3,
+          "ean": "5400816973560"
+        },
+        "productsCount": null,
+        "isSelected": false
+      },
+      {
+        "id": 180,
+        "name": "33/34",
+        "variation": {
+          "id": 985950,
+          "quantity": 2,
+          "ean": "5400816973577"
+        },
+        "productsCount": null,
+        "isSelected": false
+      },
+      {
+        "id": 179,
+        "name": "34/32",
+        "variation": {
+          "id": 985948,
+          "quantity": 3,
+          "ean": "5400816973607"
+        },
+        "productsCount": null,
+        "isSelected": false
+      },
+      {
+        "id": 181,
+        "name": "34/34",
+        "variation": {
+          "id": 985951,
+          "quantity": 1,
+          "ean": "5400816973614"
+        },
+        "productsCount": null,
+        "isSelected": false
+      },
+      {
+        "id": 221,
+        "name": "34/30",
+        "variation": {
+          "id": 985960,
+          "quantity": 2,
+          "ean": "5400816973591"
+        },
+        "productsCount": null,
+        "isSelected": false
+      },
+      {
+        "id": 186,
+        "name": "36/32",
+        "variation": {
+          "id": 985952,
+          "quantity": 3,
+          "ean": "5400816973645"
+        },
+        "productsCount": null,
+        "isSelected": false
+      },
+      {
+        "id": 187,
+        "name": "36/34",
+        "variation": {
+          "id": 985954,
+          "quantity": 1,
+          "ean": "5400816973652"
+        },
+        "productsCount": null,
+        "isSelected": false
+      }
+    ],
+    "attributes": [
+      {
+        "id": 206,
+        "name": "Цвят",
+        "value": "син",
+        "productsCount": null,
+        "isSelected": false
+      }
+    ],
+    "category": [
+      {
+        "id": 7,
+        "name": "ТОЙ",
+        "productsCount": null,
+        "level": 1,
+        "isSelected": false
+      },
+      {
+        "id": 14,
+        "name": "Дрехи",
+        "productsCount": null,
+        "level": 2,
+        "isSelected": false
+      },
+      {
+        "id": 65,
+        "name": "Дънки",
+        "productsCount": null,
+        "level": 3,
+        "isSelected": false
+      },
+      {
+        "id": 66,
+        "name": "Дънки",
+        "productsCount": null,
+        "level": 4,
+        "isSelected": false
+      }
+    ],
+    "colorversions": [
+      {
+        "color": {
+          "colorPbbCode": "95X",
+          "name": "стоманено-син",
+          "id": 35
+        },
+        "hex": "#17458b",
+        "id": 297249,
+        "productSlug": "levis-danki-501",
+        "colorImage": {
+          "name": "SS20-SJM05B_95X_C.jpg",
+          "version": "1581683675"
+        }
+      }
+    ],
+    "priceIsDiscounted": true,
+    "priceRegular": 164.9,
+    "productImages": {
+      "mainImage": {
+        "name": "SS20-SJM05B_95X_F1.jpg",
+        "version": "1581683675"
+      },
+      "orderedImages": [
+        {
+          "name": "SS20-SJM05B_95X_F1.jpg",
+          "version": "1581683675"
+        },
+        {
+          "name": "SS20-SJM05B_95X_F2.jpg",
+          "version": "1581683676"
+        },
+        {
+          "name": "SS20-SJM05B_95X_F3.jpg",
+          "version": "1581683676"
+        },
+        {
+          "name": "SS20-SJM05B_95X_F4.jpg",
+          "version": "1581683676"
+        }
+      ]
+    },
+    "productVideo": {
+      "name": "SS20-SJM05B__V.mp4",
+      "version": "1582635672"
+    },
+    "productImageDetailProductSize": "31/32",
+    "productImageDetailModelHeight": "189",
+    "sale": true,
+    "slug": "levis-danki-501",
+    "assortmentGroups": [
+      {
+        "id": 66,
+        "name": "Дънки"
+      }
+    ]
+  },
+  {
+    "id": 319887,
+    "availableFrom": "2020-03-30 12:25:18",
+    "variationId": 1064933,
+    "pbbCode": "SS20-SPM04C",
+    "colorName": "син",
+    "frontColorName": "син",
+    "price": 109.9,
+    "name": "adidas Originals - Панталони",
+    "description": "Панталон от колекция adidas Originals. Моделът е направен от трикотаж с декоративни елементи.",
+    "fullDescription": "- Крачоли завършващи с ластик.<br />- Джобове без закопчаване.<br />- Широка, еластична ивица в областта на кръста.<br />- Връзки за стягане в областта на кръста.<br />- Ширина в талията: 38 cm.<br />- Ширина в бедрата: 50 cm.<br />- Височина на талията: 31 cm.<br />- Ширина на крачолите в долната част: 12 cm.<br />- Ширина на крачолите: 29 cm.<br />- Дължина: 100 cm.<br />- Мерките се отнасят за размер: M.",
+    "colorversionCode": "SS20-SPM04C_55X",
+    "frontendUuid": "PPYK-SPM04C_55X",
+    "producerCode": "FM3768",
+    "sex": "M",
+    "season": "SS20",
+    "material": "<br />Основен материал: 77% Памук, 23% Рециклиран полиестер<br />кант: 95% Памук, 5% Спандекс",
+    "brand": "adidas Originals",
+    "productBrand": {
+      "id": 13,
+      "name": "adidas Originals",
+      "slug": "adidas-originals",
+      "logo": "cp/cms/product-brand/6-5ce5276e897610.17123600"
+    },
+    "color": {
+      "id": 30,
+      "name": "син",
+      "colorPbbCode": "55X"
+    },
+    "frontColor": {
+      "id": 25,
+      "name": "син",
+      "productsCount": null,
+      "background": "#17458b",
+      "isSelected": false
+    },
+    "sizes": [
+      {
+        "id": 2,
+        "name": "M",
+        "variation": {
+          "id": 1064933,
+          "quantity": 1,
+          "ean": "4062054792474"
+        },
+        "productsCount": null,
+        "isSelected": false
+      }
+    ],
+    "allSizes": [
+      {
+        "id": 9,
+        "name": "S",
+        "variation": {
+          "id": 1064931,
+          "quantity": 0,
+          "ean": "4062054792511"
+        },
+        "productsCount": null,
+        "isSelected": false
+      },
+      {
+        "id": 2,
+        "name": "M",
+        "variation": {
+          "id": 1064933,
+          "quantity": 1,
+          "ean": "4062054792474"
+        },
+        "productsCount": null,
+        "isSelected": false
+      },
+      {
+        "id": 3,
+        "name": "L",
+        "variation": {
+          "id": 1064934,
+          "quantity": 0,
+          "ean": "4062054791637"
+        },
+        "productsCount": null,
+        "isSelected": false
+      },
+      {
+        "id": 15,
+        "name": "XL",
+        "variation": {
+          "id": 1064932,
+          "quantity": 0,
+          "ean": "4062054792382"
+        },
+        "productsCount": null,
+        "isSelected": false
+      }
+    ],
+    "attributes": [
+      {
+        "id": 229,
+        "name": "Дизайн",
+        "value": "с щампа",
+        "productsCount": null,
+        "isSelected": false
+      },
+      {
+        "id": 249,
+        "name": "Материал",
+        "value": "трикотаж",
+        "productsCount": null,
+        "isSelected": false
+      }
+    ],
+    "category": [
+      {
+        "id": 7,
+        "name": "ТОЙ",
+        "productsCount": null,
+        "level": 1,
+        "isSelected": false
+      },
+      {
+        "id": 14,
+        "name": "Дрехи",
+        "productsCount": null,
+        "level": 2,
+        "isSelected": false
+      },
+      {
+        "id": 55,
+        "name": "Панталони",
+        "productsCount": null,
+        "level": 3,
+        "isSelected": false
+      },
+      {
+        "id": 126,
+        "name": "Анцунг",
+        "productsCount": null,
+        "level": 4,
+        "isSelected": false
+      }
+    ],
+    "colorversions": [
+      {
+        "id": 319887,
+        "color": {
+          "id": 30,
+          "name": "син",
+          "colorPbbCode": "55X"
+        },
+        "productSlug": "adidas-originals-pantaloni",
+        "hex": "#17458b",
+        "colorImage": null
+      }
+    ],
+    "priceIsDiscounted": false,
+    "priceRegular": 109.9,
+    "productImages": {
+      "mainImage": {
+        "name": "SS20-SPM04C_55X_F1.jpg",
+        "version": "1582106428"
+      },
+      "orderedImages": [
+        {
+          "name": "SS20-SPM04C_55X_F1.jpg",
+          "version": "1582106428"
+        }
+      ]
+    },
+    "productVideo": {
+      "name": "SS20-SPM04C__V.mp4",
+      "version": "1582635677"
+    },
+    "productImageDetailProductSize": "M",
+    "productImageDetailModelHeight": "189",
+    "sale": false,
+    "slug": "adidas-originals-pantaloni",
+    "assortmentGroups": [
+      {
+        "id": 126,
+        "name": "Анцунг"
+      }
+    ]
+  }
+]
