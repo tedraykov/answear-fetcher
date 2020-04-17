@@ -1,16 +1,18 @@
-import {Brand} from "./models/item.model";
+import {Brand, Item, ItemCategory, Size, Color} from "./models/item.model";
 import {from, Observable, of} from "rxjs";
 import axios, {AxiosResponse} from "axios";
 import {
     allProductsUrl,
-    answearRequestConfig,
-    getCategoryRequestData,
+    answearRequestConfig, colorMap, genderMap,
+    getCategoryRequestData, mainCategoryMap,
     productUrl,
-    requestDelay
+    requestDelay, subCategoryMap
 } from "./config/answear.config";
 import {getAllCategories} from "./utils";
 import {concatMap, delay, map, mergeMap, reduce, take, toArray} from "rxjs/operators";
 import {AnswearItem, AnswearSimpleItem} from "./models/answear.model";
+import { readFile, existsSync, readFileSync } from "fs";
+import path from "path";
 
 function fetchProductsSummary(): Observable<AnswearSimpleItem[]> {
     const categories = getAllCategories();
@@ -18,7 +20,7 @@ function fetchProductsSummary(): Observable<AnswearSimpleItem[]> {
     return from(categories).pipe(
         // TODO remove after implementation complete
         // Takes only the first two categories for performance sake
-        take(2),
+        // take(2),
         // Creates delay between each category
         concatMap(category => of(category).pipe(delay(requestDelay))),
         // Makes request to fetch n items from the specified category and flattens the response to an array
@@ -49,22 +51,86 @@ function fetchDetailedProducts(simpleItems: Observable<AnswearSimpleItem[]>): Ob
     );
 }
 
-function mapFromAnswear(answearItems: Observable<AnswearItem[]>) {
-    
+function mapFromAnswear(answearItems: Observable<AnswearItem[]>): Observable<Item[]> {
+    return answearItems.pipe(
+        map(items => {
+            return items.map(item => {
+               return <Item> {
+                   name: item.name,
+                   price: item.priceRegular,
+                   discountedPrice: item.price,
+                   description: item.description,
+                   fullDescription: item.fullDescription,
+                   brand: <Brand> {
+                       name: item.productBrand.name,
+                       companyLogoUrl: item.productBrand.logo
+                   },
+                   category: <ItemCategory> {
+                       gender: genderMap[item.sex],
+                       mainCategory: mainCategoryMap[item.category[1].name],
+                       subCategory: subCategoryMap[item.category[2].name]
+                   },
+                   color: {
+                       name: colorMap[item.colorversions[0].color.name],
+                       hex: item.colorversions[0].hex
+                   },
+                   images: item.productImages.orderedImages,
+                   sizes: item.allSizes.map(size => {
+                        return {
+                            value: size.name,
+                            sizeCategory: mainCategoryMap[item.category[1].name],
+                            quantity: size.variation.quantity || 0
+                        }
+                   })
+               }
+            });
+        })
+    )
 }
 
-export function getItems(): Observable<any> {
+export function getAnswearItems(): Observable<AnswearItem[]>{
     // Get all products in all categories
     const answearSimpleItems = fetchProductsSummary();
 
     // Fetch detailed information for each item
-    const answearItems = fetchDetailedProducts(answearSimpleItems);
+    return fetchDetailedProducts(answearSimpleItems);
 
-    // Map Answear items to custom items
-    const items = mapFromAnswear(answearItems);
-    return answearItems;
 }
 
-export function getBrands(): Brand[] {
-    return [];
+export function getItems(): Observable<Item[]> {
+    const filePath = path.join('resources/answear-items.json');
+    let answearItems: Observable<AnswearItem[]>;
+    if (!existsSync(filePath)) {
+        answearItems = getAnswearItems();
+    } else {
+        const fileData = JSON.parse(readFileSync(filePath).toString());
+        answearItems = of(fileData);
+    }
+    // Map Answear items to custom items
+    const items = mapFromAnswear(answearItems);
+    // return answearItems;
+    return items;
+}
+
+export function getItemAttributes(): {brand: Brand[], color: Color[], category: ItemCategory[]} {
+    const items: Item[] = JSON.parse(readFileSync(path.join('resources/item.json')).toString());
+    const brandSet = new Set(items.map(item => item.brand));
+    const colorSet = new Set(items.map(item => item.color));
+    const categorySet = new Set(items.map(item => item.category));
+    return {
+        brand: Array.from(brandSet.values()),
+        color: Array.from(colorSet.values()),
+        category: Array.from(categorySet.values())
+    };
+    
+}
+
+export function printAllSubCategories(callback: () => any) {
+    readFile(path.join('resources/answear-items.json'), (err, stream) => {
+        const answearData: AnswearItem[] = JSON.parse(stream.toString());
+        const categories = answearData.map(item => item.colorversions[0].color.name);
+        const uniqueCategories: Set<string> = new Set(categories);
+        console.log(uniqueCategories);
+        callback();
+    })
 }

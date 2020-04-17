@@ -1,19 +1,21 @@
-import {getBrands, getItems} from '../index';
-import {Brand} from "../models/item.model";
-import {writeFileSync} from "fs";
+import {getAnswearItems, getItemAttributes, getItems, printAllSubCategories} from '../index';
+import {Brand, Item, Color, ItemCategory} from "../models/item.model";
+import {writeFileSync, writeFile} from "fs";
 import path from "path";
 
 describe('Fetching items', () => {
 
     it('should return list of brands', () => {
-        const brands: Brand[] = getBrands();
-        expect(brands).toBeDefined();
+        const attributes: {brand: Brand[], color: Color[], category: ItemCategory[]} = getItemAttributes()
+        writeFileSync('resources/brand.json', JSON.stringify(attributes.brand));
+        writeFileSync('resources/color.json', JSON.stringify(attributes.color));
+        writeFileSync('resources/category.json', JSON.stringify(attributes.category));
     });
 
     it('should get all items', done => {
-        getItems().pipe().subscribe(
+        getAnswearItems().pipe().subscribe(
             (items) => {
-                const filepath = path.join('resources/fetched-items.json');
+                const filepath = path.join('resources/answear-items.json');
                 writeFileSync(filepath, JSON.stringify(items));
             },
             error => {
@@ -23,6 +25,19 @@ describe('Fetching items', () => {
                 done();
             }
         );
-    }, 30000);
+    }, 3000000);
 
+    it('should read fetched answear data', done => {
+        printAllSubCategories(done);
+    });
+
+    it('should get items', done => {
+       getItems().subscribe(
+           (items: Item[]) => {
+            writeFileSync('resources/item.json', JSON.stringify(items));
+           },
+           err => console.error(err),
+           () => done()
+       ) 
+    });
 });
