@@ -1,7 +1,6 @@
 export interface Size {
     value: string;
     sizeCategory: string;
-    quantity: number;
 }
 
 export interface Item {
@@ -14,7 +13,13 @@ export interface Item {
     category: ItemCategory;
     color: Color;
     images: Image[]; //Links to images
-    sizes: Size[]; //size & quantity of this size
+    itemVarieties: ItemVariety[]; //size & quantity of this size
+}
+
+export interface ItemVariety {
+    quantity: number;
+    ean: string;
+    size: Size;
 }
 
 export interface Image {

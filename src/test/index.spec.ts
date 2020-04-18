@@ -1,15 +1,16 @@
 import {getAnswearItems, getItemAttributes, getItems, printAllSubCategories} from '../index';
-import {Brand, Item, Color, ItemCategory} from "../models/item.model";
+import {Brand, Item, Color, ItemCategory, Size} from "../models/item.model";
 import {writeFileSync, writeFile} from "fs";
 import path from "path";
 
 describe('Fetching items', () => {
 
     it('should return list of brands', () => {
-        const attributes: {brand: Brand[], color: Color[], category: ItemCategory[]} = getItemAttributes()
+        const attributes: {brand: Brand[], color: Color[], category: ItemCategory[], size: Size[]} = getItemAttributes()
         writeFileSync('resources/brand.json', JSON.stringify(attributes.brand));
         writeFileSync('resources/color.json', JSON.stringify(attributes.color));
         writeFileSync('resources/category.json', JSON.stringify(attributes.category));
+        writeFileSync('resources/size.json', JSON.stringify(attributes.size))
     });
 
     it('should get all items', done => {

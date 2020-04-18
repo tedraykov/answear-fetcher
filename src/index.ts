@@ -1,4 +1,4 @@
-import {Brand, Item, ItemCategory, Size, Color} from "./models/item.model";
+import {Brand, Item, ItemCategory, Size, Color, ItemVariety} from "./models/item.model";
 import {from, Observable, of} from "rxjs";
 import axios, {AxiosResponse} from "axios";
 import {
@@ -75,12 +75,15 @@ function mapFromAnswear(answearItems: Observable<AnswearItem[]>): Observable<Ite
                        hex: item.colorversions[0].hex
                    },
                    images: item.productImages.orderedImages,
-                   sizes: item.allSizes.map(size => {
-                        return {
+                   itemVarieties: item.allSizes.map(size => {
+                       return <ItemVariety> {
+                           quantity: size.variation.quantity,
+                           ean: size.variation.ean,
+                           size: <Size> {
                             value: size.name,
-                            sizeCategory: mainCategoryMap[item.category[1].name],
-                            quantity: size.variation.quantity || 0
-                        }
+                            sizeCategory: mainCategoryMap[item.category[1].name]
+                           }
+                       }
                    })
                }
             });
@@ -112,15 +115,18 @@ export function getItems(): Observable<Item[]> {
     return items;
 }
 
-export function getItemAttributes(): {brand: Brand[], color: Color[], category: ItemCategory[]} {
+export function getItemAttributes(): {brand: Brand[], color: Color[], category: ItemCategory[], size: Size[]} {
     const items: Item[] = JSON.parse(readFileSync(path.join('resources/item.json')).toString());
-    const brandSet = new Set(items.map(item => item.brand));
-    const colorSet = new Set(items.map(item => item.color));
-    const categorySet = new Set(items.map(item => item.category));
+    const brand = items.map(item => item.brand);
+    const color = items.map(item => item.color);
+    const category = items.map(item => item.category);
+    const size = items.flatMap(item => item.itemVarieties).map(itemVariety => itemVariety.size);
+
     return {
-        brand: Array.from(brandSet.values()),
-        color: Array.from(colorSet.values()),
-        category: Array.from(categorySet.values())
+        brand,
+        color,
+        category,
+        size
     };
     
 }
